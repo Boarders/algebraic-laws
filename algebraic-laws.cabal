@@ -1,0 +1,53 @@
+cabal-version:      2.2
+category:           Control
+build-type:         Simple
+
+name:               algebraic-laws
+version:            0.1.0
+
+author:             Callan McGill
+maintainer:         callan.mcgill@gmail.com
+copyright:          2018
+license:            BSD-3-Clause
+
+
+extra-source-files:
+
+Library
+
+  hs-source-dirs:   src
+
+  ghc-options:      -Wall
+
+  build-depends:    base >=4.7 && <5
+                  , tasty
+                  , tasty-quickcheck
+
+  exposed-modules:  Semigroup.Laws
+                    Monoid.Laws
+
+  other-modules:
+
+  default-language: Haskell2010
+
+
+Test-Suite testsuite
+
+  type:             exitcode-stdio-1.0
+
+  main-is:          Test.hs
+
+  hs-source-dirs:   test
+
+  ghc-options:      -Wall
+                    -Wincomplete-patterns
+
+  build-depends:    algebraic-laws
+                  , base                >=4.7 && <5
+                  , tasty
+
+
+  other-modules:    Semigroup.Test
+                    Monoid.Test
+
+  default-language: Haskell2010
