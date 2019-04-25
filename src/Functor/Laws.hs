@@ -14,7 +14,7 @@
 --
 -- * <$ law
 --
---       @(<$) = fmap . const@
+--       @(<$) == fmap . const@
 module Functor.Laws where
 
 import Test.Tasty (TestTree, testGroup, TestName)
