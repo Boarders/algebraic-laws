@@ -6,15 +6,15 @@
 --
 -- * identity
 --
---       @fmap id == id@
+--       @fmap id === id@
 --
 -- * composition
 --
---       @fmap (f . g) == fmap f . fmap g@
+--       @fmap (f . g) === fmap f . fmap g@
 --
 -- * <$ law
 --
---       @(<$) == fmap . const@
+--       @(<$) === fmap . const@
 module Functor.Laws where
 
 import Test.Tasty (TestTree, testGroup, TestName)
@@ -22,8 +22,8 @@ import Test.Tasty.QuickCheck  as QC
 
 
 -- |
--- This defines a 'TestTree' for the 'Functor' laws consisitng of the 'identity'
--- and 'composition' laws.
+-- This defines a 'TestTree' for the 'Functor' laws consisitng of 'identity'
+-- 'composition' and 'zlzdLaw'.
 functorLaws
   :: forall f a b c
   . ( Functor f
@@ -57,7 +57,7 @@ functorLaws typeName =
 
 
 -- |
---       @fmap id == id@
+--       @fmap id === id@
 identity :: forall f a . (Functor f, Eq (f a), Show (f a)) => f a -> Property
 identity fa = ((fmap @f) (id @a)) fa === (id @(f a)) fa
 
@@ -80,9 +80,9 @@ composition fa g h =
   === ((fmap @f) (applyFun g) . (fmap @f) (applyFun h)) fa
 
 
--- * <$ law
---
---       @(<$) = fmap . const@
+
+-- |
+--       @(<$) === fmap . const@
 zlzdLaw
   :: forall f a b
   . ( Functor f
