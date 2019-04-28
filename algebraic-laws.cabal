@@ -25,9 +25,12 @@ Library
                   , QuickCheck
                   , template-haskell
 
-  exposed-modules:  Semigroup.Laws
-                    Monoid.Laws
+  exposed-modules:  Eq.Laws
                     Functor.Laws
+                    Monoid.Laws
+                    Semigroup.Laws
+                    Ord.Laws
+                    
                     Test.Generation
 
   other-modules:
@@ -51,8 +54,13 @@ Test-Suite testsuite
                   , tasty
 
 
-  other-modules:    Semigroup.Test
-                    Monoid.Test
+  other-modules:    
+                    Eq.Test
                     Functor.Test
+                    Monoid.Test
+                    Ord.Test
+                    Semigroup.Test
+                    
+
 
   default-language: Haskell2010
