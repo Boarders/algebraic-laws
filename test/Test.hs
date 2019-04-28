@@ -1,11 +1,11 @@
 module Main where
 
+import qualified Eq.Test        as Eq
+import qualified Functor.Test   as Functor
+import qualified Monoid.Test    as Monoid
+import qualified Ord.Test       as Ord
 import qualified Semigroup.Test as Semigroup
-import qualified Monoid.Test as Monoid
-import qualified Functor.Test as Functor
-import qualified Eq.Test as Eq
-import qualified Ord.Test as Ord
-import Test.Tasty
+import           Test.Tasty
 
 
 main :: IO ()

@@ -1,9 +1,9 @@
 {-# LANGUAGE TypeApplications #-}
 module Semigroup.Test where
 
-import Semigroup.Laws
-import Data.Semigroup
-import Test.Tasty
+import           Data.Semigroup
+import           Semigroup.Laws
+import           Test.Tasty
 
 
 testSuite :: TestTree

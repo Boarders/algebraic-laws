@@ -9,8 +9,8 @@
 --       @x <> (y <> z) = (x <> y) <> z@
 module Semigroup.Laws where
 
-import Test.Tasty (TestTree, testGroup, TestName)
-import Test.Tasty.QuickCheck  as QC
+import           Test.Tasty            (TestName, TestTree, testGroup)
+import           Test.Tasty.QuickCheck as QC
 
 -- |
 -- This defines a 'TestTree' for the 'Semigroup' laws consisitng of the 'associativity'

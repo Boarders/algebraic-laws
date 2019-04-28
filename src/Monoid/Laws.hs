@@ -1,6 +1,6 @@
 {-# LANGUAGE AllowAmbiguousTypes #-}
 {-# LANGUAGE ScopedTypeVariables #-}
-{-# LANGUAGE TypeApplications #-}
+{-# LANGUAGE TypeApplications    #-}
 
 -- | This module provides property tests for the monoid laws:
 --
@@ -22,9 +22,9 @@
 
 module Monoid.Laws where
 
-import Test.Tasty (TestTree, testGroup, TestName)
-import Test.Tasty.QuickCheck  as QC
-import Semigroup.Laws
+import           Semigroup.Laws
+import           Test.Tasty            (TestName, TestTree, testGroup)
+import           Test.Tasty.QuickCheck as QC
 
 
 -- | This defines a 'TestTree' for the 'Monoid' laws consisting of 'associativity',

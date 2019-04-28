@@ -45,8 +45,8 @@
 
 module Ord.Laws where
 
-import Test.Tasty (TestTree, testGroup, TestName)
-import Test.Tasty.QuickCheck as QC
+import           Test.Tasty            (TestName, TestTree, testGroup)
+import           Test.Tasty.QuickCheck as QC
 
 
 -- |
@@ -67,7 +67,7 @@ ordLaws typeName =
       , QC.testProperty reflexivityTestName    (reflexivity @a)
       , QC.testProperty antisymmetryTestName    (antisymmetry @a)
       , QC.testProperty zgzeLawTestName    (zgzeLaw @a)
-      , QC.testProperty zlLawTestName    (zlLaw @a)      
+      , QC.testProperty zlLawTestName    (zlLaw @a)
       , QC.testProperty zgLawTestName    (zgLaw @a)
       , QC.testProperty compareLaw1TestName    (compareLaw1 @a)
       , QC.testProperty compareLaw2TestName    (compareLaw2 @a)
@@ -101,14 +101,14 @@ ordLaws typeName =
     compareLaw2TestName = "Compare Law"
 
     compareLaw3TestName :: TestName
-    compareLaw3TestName = "Compare Law"    
+    compareLaw3TestName = "Compare Law"
 
     minLawTestName :: TestName
     minLawTestName = "Min Law"
 
     maxLawTestName :: TestName
     maxLawTestName = "Max Law"
-    
+
 
 -- |
 --       @if x <= y && y <= z = True, then x <= z = True@

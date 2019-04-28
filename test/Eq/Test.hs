@@ -1,8 +1,8 @@
 {-# LANGUAGE TypeApplications #-}
 module Eq.Test where
 
-import Eq.Laws
-import Test.Tasty
+import           Eq.Laws
+import           Test.Tasty
 
 
 testSuite :: TestTree

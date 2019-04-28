@@ -29,8 +29,8 @@
 
 module Eq.Laws where
 
-import Test.Tasty (TestTree, testGroup, TestName)
-import Test.Tasty.QuickCheck  as QC
+import           Test.Tasty            (TestName, TestTree, testGroup)
+import           Test.Tasty.QuickCheck as QC
 
 
 -- |
@@ -57,7 +57,7 @@ eqLaws typeName =
   where
     reflexivityTestName :: TestName
     reflexivityTestName = "Reflexivity"
- 
+
     symmetryTestName :: TestName
     symmetryTestName = "Symmetry"
 
@@ -69,7 +69,7 @@ eqLaws typeName =
 
     negationTestName :: TestName
     negationTestName = "Negation"
-    
+
 
 -- |
 --       @x == x = True@
@@ -105,7 +105,7 @@ substitutivity x y f
   |  x == y = (applyFun f x == applyFun f y) === True
   | otherwise = property True
 
-  
+
 
 -- |
 --       @x /= y = not (x == y)@

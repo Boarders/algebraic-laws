@@ -1,8 +1,8 @@
 {-# LANGUAGE TypeApplications #-}
 module Functor.Test where
 
-import Functor.Laws
-import Test.Tasty
+import           Functor.Laws
+import           Test.Tasty
 
 
 testSuite :: TestTree

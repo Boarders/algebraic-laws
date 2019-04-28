@@ -2,7 +2,7 @@
 
 module Test.Generation where
 
-import Language.Haskell.TH
+import           Language.Haskell.TH
 
 typeclassNames :: [String]
 typeclassNames = ["Semigroup", "Monoid"]

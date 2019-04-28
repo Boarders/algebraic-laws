@@ -1,9 +1,9 @@
 {-# LANGUAGE TypeApplications #-}
 module Monoid.Test where
 
-import Monoid.Laws
-import Data.Monoid
-import Test.Tasty
+import           Data.Monoid
+import           Monoid.Laws
+import           Test.Tasty
 
 
 testSuite :: TestTree

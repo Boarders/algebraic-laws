@@ -1,8 +1,8 @@
 {-# LANGUAGE TypeApplications #-}
 module Ord.Test where
 
-import Ord.Laws
-import Test.Tasty
+import           Ord.Laws
+import           Test.Tasty
 
 
 testSuite :: TestTree

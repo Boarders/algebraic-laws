@@ -17,8 +17,8 @@
 --       @(<$) === fmap . const@
 module Functor.Laws where
 
-import Test.Tasty (TestTree, testGroup, TestName)
-import Test.Tasty.QuickCheck  as QC
+import           Test.Tasty            (TestName, TestTree, testGroup)
+import           Test.Tasty.QuickCheck as QC
 
 
 -- |
@@ -53,7 +53,7 @@ functorLaws typeName =
 
     zlzdLawTestName :: TestName
     zlzdLawTestName = "<$ Law"
-    
+
 
 
 -- |
@@ -69,7 +69,7 @@ composition
   . ( Functor f
     , Eq (f c)
     , Show (f c)
-    , Show a, Show b, Show c    
+    , Show a, Show b, Show c
     , Function a, Function b
     , CoArbitrary a, Arbitrary b
     , CoArbitrary b, Arbitrary c
