@@ -25,7 +25,9 @@ Library
                   , QuickCheck
                   , template-haskell
 
-  exposed-modules:  Eq.Laws
+  exposed-modules:  
+                    Applicative.Laws
+                    Eq.Laws
                     Functor.Laws
                     Monoid.Laws
                     Semigroup.Laws
